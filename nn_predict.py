@@ -3,11 +3,12 @@ import json
 
 # === Activation functions ===
 def relu(x):
-    return np.maximum(0, x)
+    # Implement the Rectified Linear Unit
+    return x
 
 def softmax(x):
-    e = np.exp(x - np.max(x, axis=-1, keepdims=True))
-    return e / np.sum(e, axis=-1, keepdims=True)
+    # Implement the SoftMax function
+    return x
 
 # === Flatten ===
 def flatten(x):
@@ -16,28 +17,6 @@ def flatten(x):
 # === Dense layer ===
 def dense(x, W, b):
     return x @ W + b
-
-# === Forward pass ===
-def forward(x):
-    for layer in architecture:
-        lname = layer['name']
-        ltype = layer['type']
-        cfg = layer['config']
-        wnames = layer['weights']
-
-        if ltype == "Flatten":
-            x = flatten(x)
-        elif ltype == "Dense":
-            W = weights[wnames[0]]
-            b = weights[wnames[1]]
-            x = dense(x, W, b)
-            if cfg.get("activation") == "relu":
-                x = relu(x)
-            elif cfg.get("activation") == "softmax":
-                x = softmax(x)
-
-    return x
-
 
 # Infer TensorFlow h5 model using numpy
 # Support only Dense, Flatten, relu, softmax now
