@@ -3,11 +3,11 @@ import json
 
 # === Activation functions ===
 def relu(x):
-    # Implement the Rectified Linear Unit
+    # TODO: Implement the Rectified Linear Unit
     return x
 
 def softmax(x):
-    # Implement the SoftMax function
+    # TODO: Implement the SoftMax function
     return x
 
 # === Flatten ===
