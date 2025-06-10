@@ -41,3 +41,7 @@ Your score will be based on the functions you fulfilled and the accuracy of your
 | Test Accuracy > 0.9 | 3     |
 | Test Accuracy > 0.91 | 4     |
 | Test Accuracy > 0.92 | 4     |
+
+## Note
+
+Modify the test file `modet_test.py` will fail the test and consider as cheat.
